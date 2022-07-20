@@ -1,0 +1,9 @@
+main:
+  - title: "포스트"
+    url: /posts/
+  - title: "카테고리"
+    url: /categories/
+  - title: "태그"
+    url: /tags/
+  - title: "About"
+    url: /about/
