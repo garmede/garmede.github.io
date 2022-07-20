@@ -1,24 +1,3 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-markdown: kramdown
 title: "GEOGON"
 title_separator: "-"
 subtitle: "그래픽 노트 - 아직 제작이 완료되지 않았습니다.(Under Construction)"
@@ -30,11 +9,13 @@ repository: garmede/garmede.github.io
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
+markdown: kramdown
 
 locale: ko-KR
 permalink: /:categories/:title
-paginate: 1 # amount of posts to show
+paginate: 5 # amount of posts to show
 paginate_path: /page:num/
+breadcrumbs: true
 timezone: Asia/Seoul
 include:
   - _pages
@@ -55,34 +36,36 @@ search_provider: # lunr (default), algolia, google
 twitter:
   username: Yungon
 
-author:
-  name: "GEOGON"
-  bio: "I am an **amazing** person."
-  links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+# author:
+#   name: "차영곤"
+#   bio: "I am an **amazing** person."
+#   links:
+#     - label: "Website"
+#       icon: "fas fa-fw fa-link"
+#       url: "https://"
+#     - label: "Twitter"
+#       icon: "fab fa-fw fa-twitter-square"
+#       url: "https://twitter.com/"
+#     - label: "GitHub"
+#       icon: "fab fa-fw fa-github"
+#       url: "https://github.com/"
+#     - label: "Instagram"
+#       icon: "fab fa-fw fa-instagram"
+#       url: "https://instagram.com/"
 
 footer:
   links:
-    - label: "Twitter"
+    - label: "트위터"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/"
-    - label: "GitHub"
+    - label: "깃헙"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: "라이센스"
+      icon: "/assets/images/88x31.png"
+    # - label: "인스타그램"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/"
 
 defaults:
   # _posts
@@ -111,10 +94,7 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# Build settings
-# theme: minima
 remote_theme: mmistakes/minimal-mistakes
-# theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "dark"
 plugins:
   - jekyll-feed
@@ -122,8 +102,16 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-data
   - jemoji
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -1,0 +1,208 @@
+/* Pretendard CDN*/
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 900;
+	font-display: swap;
+	src: local("Pretendard Black"), url("/assets/fonts/Pretendard-Black.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 800;
+	font-display: swap;
+	src: local("Pretendard ExtraBold"), url("/assets/fonts/Pretendard-ExtraBold.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 700;
+	font-display: swap;
+	src: local("Pretendard Bold"), url("/assets/fonts/Pretendard-Bold.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 600;
+	font-display: swap;
+	src: local("Pretendard SemiBold"), url("/assets/fonts/Pretendard-SemiBold.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 500;
+	font-display: swap;
+	src: local("Pretendard Medium"), url("/assets/fonts/Pretendard-Medium.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 400;
+	font-display: swap;
+	src: local("Pretendard Regular"), url("/assets/fonts/Pretendard-Regular.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 300;
+	font-display: swap;
+	src: local("Pretendard Light"), url("/assets/fonts/Pretendard-Light.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 200;
+	font-display: swap;
+	src: local("Pretendard ExtraLight"), url("/assets/fonts/Pretendard-ExtraLight.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Pretendard";
+	font-weight: 100;
+	font-display: swap;
+	src: local("Pretendard Thin"), url("/assets/fonts/Pretendard-Thin.subset.woff2") format("woff2");
+}
+
+/* Cascadia Mono */
+@font-face {
+	font-family: "Cascadia Mono";
+	font-weight: 700;
+	font-display: swap;
+	src: local("Cascadia Mono Bold"), url("/assets/fonts/CascadiaMono-Bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Cascadia Mono";
+	font-weight: 600;
+	font-display: swap;
+	src: local("Cascadia Mono SemiBold"), url("/assets/fonts/CascadiaMono-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Cascadia Mono";
+	font-weight: 400;
+	font-display: swap;
+	src: local("Cascadia Mono Regular"), url("/assets/fonts/CascadiaMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Cascadia Mono";
+	font-weight: 350;
+	font-display: swap;
+	src: local("Cascadia Mono SemiLight"), url("/assets/fonts/CascadiaMono-SemiLight.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Cascadia Mono";
+	font-weight: 300;
+	font-display: swap;
+	src: local("Cascadia Mono Light"), url("/assets/fonts/CascadiaMono-Light.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Cascadia Mono";
+	font-weight: 200;
+	font-display: swap;
+	src: local("Cascadia Mono ExtraLight"), url("/assets/fonts/CascadiaMono-ExtraLight.woff2") format("woff2");
+}
+
+/* Cascadia Mono Itelic*/
+@font-face {
+	font-family: "Cascadia Mono";
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: local("Cascadia Mono Bold Italic"), url("/assets/fonts/CascadiaMono-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Cascadia Mono";
+	font-style: italic;
+	font-weight: 600;
+	font-display: swap;
+	src: local("Cascadia Mono SemiBold Italic"), url("/assets/fonts/CascadiaMono-SemiBoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Cascadia Mono";
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: local("Cascadia Mono Italic"), url("/assets/fonts/CascadiaMono-Italic.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Cascadia Mono";
+	font-style: italic;
+	font-weight: 350;
+	font-display: swap;
+	src: local("Cascadia Mono SemiLight Italic"), url("/assets/fonts/CascadiaMono-SemiLightItalic.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Cascadia Mono";
+	font-style: italic;
+	font-weight: 300;
+	font-display: swap;
+	src: local("Cascadia Mono Light Italic"), url("/assets/fonts/CascadiaMono-LightItalic.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Cascadia Mono";
+	font-style: italic;
+	font-weight: 200;
+	font-display: swap;
+	src: local("Cascadia Mono ExtraLight Italic"), url("/assets/fonts/CascadiaMono-ExtraLightItalic.woff2") format("woff2");
+}
+
+/* Source Han Mono */
+@font-face {
+	font-family: "Source Han Mono";
+	font-weight: 900;
+	font-display: swap;
+	src: local("Source Han Mono Black"), url("/assets/fonts/SourceHanMono-Black.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Source Han Mono";
+	font-weight: 700;
+	font-display: swap;
+	src: local("Source Han Mono Bold"), url("/assets/fonts/SourceHanMono-Bold.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Source Han Mono";
+	font-weight: 500;
+	font-display: swap;
+	src: local("Source Han Mono Medium"), url("/assets/fonts/SourceHanMono-Medium.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Source Han Mono";
+	font-weight: 400;
+	font-display: swap;
+	src: local("Source Han Mono Regular"), url("/assets/fonts/SourceHanMono-Regular.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Source Han Mono";
+	font-weight: 300;
+	font-display: swap;
+	src: local("Source Han Mono Light"), url("/assets/fonts/SourceHanMono-Light.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Source Han Mono";
+	font-weight: 200;
+	font-display: swap;
+	src: local("Source Han Mono ExtraLight"), url("/assets/fonts/SourceHanMono-ExtraLight.subset.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Source Han Mono";
+	font-weight: 100;
+	font-display: swap;
+	src: local("Source Han Mono Thin"), url("/assets/fonts/SourceHanMono-Thin.subset.woff2") format("woff2");
+}
+
+/* Noto Serif KR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');

@@ -35,6 +35,8 @@ GEM
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (2.0.3)
+    faraday-retry (2.0.0)
+      faraday (~> 2.0)
     ffi (1.15.5-x64-mingw-ucrt)
     filesize (0.2.0)
     forwardable-extended (2.6.0)
@@ -131,8 +133,6 @@ GEM
       jekyll (~> 3.9.0)
       jekyll-commonmark (~> 1.4.0)
       rouge (>= 2.0, < 4.0)
-    jekyll-data (1.1.1)
-      jekyll (>= 3.3, < 5.0.0)
     jekyll-default-layout (0.1.4)
       jekyll (~> 3.0)
     jekyll-feed (0.15.1)
@@ -281,9 +281,9 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  faraday-retry
   github-pages
   jekyll-algolia
-  jekyll-data
   jekyll-feed
   jekyll-gist
   jekyll-include-cache

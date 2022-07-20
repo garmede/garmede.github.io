@@ -5,5 +5,5 @@ main:
     url: /categories/
   - title: "태그"
     url: /tags/
-  - title: "About"
+  - title: "정보"
     url: /about/
