@@ -36,6 +36,12 @@ search_provider: # lunr (default), algolia, google
 twitter:
   username: Yungon
 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-K2Z8Z9ZXSL"
+    anonymize_ip: false # default
+
 # author:
 #   name: "차영곤"
 #   bio: "I am an **amazing** person."
