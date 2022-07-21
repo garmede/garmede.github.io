@@ -114,10 +114,19 @@ sass:
   sass_dir: _sass
   style: compressed
 
+# compress_html:
+#   clippings: all
+#   ignore:
+#     envs: development
+
 compress_html:
   clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
   ignore:
-    envs: development
+    envs: []
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
