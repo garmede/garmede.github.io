@@ -3,6 +3,6 @@ permalink: /about/
 title: "정보"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+게임 그래픽 업계가 워낙 변화도 빠르지만 공부할 것도 많습니다. 빠른 변화에 맞춰 새로운 것을 익힐지, 기본을 더 다질 것인지 선택 장애가 심각한 저로서는 늘 고민입니다. 그래서 머릿속에 있는 정보들을 정리도 할 겸 매우 기본적인 것들부터 종종 새로운 것(제가 정리할 수만 있다면)들도 정리해 볼 생각입니다. 아마 아주 사소한 것까지 올릴 수도 있지 않을까 생각합니다.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+블로그를 안 한 지 꽤 오랜 시간이 흘러 인제 와서 잘 할 수 있을지 모르겠지만 본업에 문제가 가지 않는 선에서 꾸준히 정리해 보도록 하겠습니다.
