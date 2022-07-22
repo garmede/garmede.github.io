@@ -1,3 +1,21 @@
+# 위치
+sass:
+  style: compressed
+
+# 플러그인
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
+
+# 출력
+permalink: /:categories/:title
+paginate_path: /page:num/
+timezone: Asia/Seoul
+
 title: "GEOGON"
 title_separator: "-"
 subtitle: "그래픽 노트 - 아직 제작이 완료되지 않았습니다.(Under Construction)"
@@ -9,14 +27,10 @@ repository: garmede/garmede.github.io
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
-markdown: kramdown
 
 locale: ko-KR
-permalink: /:categories/:title
 paginate: 5 # amount of posts to show
-paginate_path: /page:num/
 breadcrumbs: true
-timezone: Asia/Seoul
 include:
   - _pages
 
@@ -102,17 +116,7 @@ tag_archive:
 
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "dark"
-plugins:
-  - jekyll-feed
-  - jekyll-include-cache
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jemoji
 
-sass:
-  sass_dir: _sass
-  style: compressed
 
 # compress_html:
 #   clippings: all
@@ -122,11 +126,33 @@ sass:
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
-  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  endings:
+    [
+      html,
+      head,
+      body,
+      li,
+      dt,
+      dd,
+      rt,
+      rp,
+      optgroup,
+      option,
+      colgroup,
+      caption,
+      thead,
+      tbody,
+      tfoot,
+      tr,
+      td,
+      th,
+    ]
   profile: false
   blanklines: false
   ignore:
     envs: []
+
+# livereload: true
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
