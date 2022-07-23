@@ -30,7 +30,7 @@ license: "CC BY-NC 4.0"
 
 <iframe width="1280" height="720" src="https://www.youtube.com/embed/-P28LKWTzrI" title="Mythbusters Demo GPU versus CPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
 
-이 영상도 마찬가지지만 많은 곳에서 CPU와 GPU가 각자 따로 작동하는 것처럼 표현되어 있습니다. 그리고 많은 곳에서 CPU vs GPU 같은 식으로 서로 어느 것이 더 나은지 비교하는 글들도 많습니다. 마치 대등한 관계인 양 표현됩니다. 하지만 실상은 GPU가 작동하는 대부분은 CPU에서 명령을 받아 일하는 노예같은 존재라는 것입니다.
+이 영상도 마찬가지지만 많은 곳에서 CPU와 GPU가 각자 따로 작동하는 것처럼 표현되어 있습니다. 그리고 많은 곳에서 CPU vs GPU 같은 식으로 서로 어느 것이 더 나은지 비교하는 글들도 많습니다. 마치 대등한 관계인 양 말이죠. 하지만 실상은 GPU가 작동하는 대부분은 CPU에서 명령을 받아 일하는 노예같은 존재라는 것입니다.
 
 ![](/assets/images/blog/what-is-shader-cpu-gpu.webp){: .zoom}
 
