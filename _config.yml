@@ -124,7 +124,6 @@ compress_html:
 comments:
   provider: "utterances"
   utterances:
-    theme: "github-dark" # "github-dark"
+    theme: "dark-blue"
     issue_term: "pathname"
-    label: "댓글" # Optional - must be existing label.
     crossorigin: "anonymous"
