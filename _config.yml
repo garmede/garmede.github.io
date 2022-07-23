@@ -2,6 +2,9 @@
 sass:
   style: compressed
 
+# 읽기 핸들링
+include: [".htaccess", "_pages"]
+
 # 플러그인
 plugins:
   - jekyll-feed
@@ -16,39 +19,25 @@ permalink: /:categories/:title
 paginate_path: /page:num/
 timezone: Asia/Seoul
 
-title: "GEOGON"
-title_separator: "-"
-subtitle: "그래픽 노트 - 아직 제작이 완료되지 않았습니다.(Under Construction)"
+title: "GeoGon"
+title_separator: " | "
+subtitle: "그래픽 노트"
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  그래픽에 대한 생각도 정리할 겸 소소하게 기록을 남겨 두는 블로그입니다.
 repository: garmede/garmede.github.io
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo: "/assets/images/88x88.webp"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title
 
 locale: ko-KR
 paginate: 5 # amount of posts to show
 breadcrumbs: true
-include:
-  - _pages
 
-email: garmede@gmail.com
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://garmede.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: Yungon
 github_username: garmede
+email: garmede@gmail.com
+url: https://garmede.github.io
 
-atom_feed:
-  path: # blank (default) uses feed.xml
-  hide: # true, false (default)
-search: true # true, false (default)
-search_full_content: # true, false (default)
-search_provider: # lunr (default), algolia, google
-
-twitter:
-  username: Yungon
+search: true
 
 analytics:
   provider: "google-gtag"
@@ -56,36 +45,24 @@ analytics:
     tracking_id: "G-K2Z8Z9ZXSL"
     anonymize_ip: false # default
 
-# author:
-#   name: "차영곤"
-#   bio: "I am an **amazing** person."
-#   links:
-#     - label: "Website"
-#       icon: "fas fa-fw fa-link"
-#       url: "https://"
-#     - label: "Twitter"
-#       icon: "fab fa-fw fa-twitter-square"
-#       url: "https://twitter.com/"
-#     - label: "GitHub"
-#       icon: "fab fa-fw fa-github"
-#       url: "https://github.com/"
-#     - label: "Instagram"
-#       icon: "fab fa-fw fa-instagram"
-#       url: "https://instagram.com/"
+date_format: "%Y년 %m월 %d일"
+
+author:
+  name: "차영곤"
+  bio: "어딘가에서 부족하지만 TA로 일하고 있습니다."
+  location: "경기도 성남"
+  email: garmede@gmail.com
+  avatar: "/assets/images/bio-photo.webp"
+  links:
+    - label: "깃허브"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/garmede"
 
 footer:
   links:
-    - label: "트위터"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "깃헙"
+    - label: "깃허브"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "라이센스"
-      icon: "/assets/images/88x31.png"
-    # - label: "인스타그램"
-    #   icon: "fab fa-fw fa-instagram"
-    #   url: "https://instagram.com/"
+      url: "https://github.com/garmede"
 
 defaults:
   # _posts
@@ -117,58 +94,37 @@ tag_archive:
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "dark"
 
-
-# compress_html:
-#   clippings: all
-#   ignore:
-#     envs: development
-
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
   endings:
-    [
-      html,
-      head,
-      body,
-      li,
-      dt,
-      dd,
-      rt,
-      rp,
-      optgroup,
-      option,
-      colgroup,
-      caption,
-      thead,
-      tbody,
-      tfoot,
-      tr,
-      td,
-      th,
-    ]
+    - "html"
+    - "head"
+    - "body"
+    - "li"
+    - "dt"
+    - "dd"
+    - "rt"
+    - "rp"
+    - "optgroup"
+    - "option"
+    - "colgroup"
+    - "caption"
+    - "thead"
+    - "tbody"
+    - "tfoot"
+    - "tr"
+    - "td"
+    - "th"
   profile: false
   blanklines: false
   ignore:
     envs: []
 
-# livereload: true
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-dark" # "github-dark"
+    issue_term: "pathname"
+    label: "댓글" # Optional - must be existing label.
+    crossorigin: "anonymous"
