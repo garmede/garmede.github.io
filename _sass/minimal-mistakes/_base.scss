@@ -157,6 +157,10 @@ pre {
   font-family: $monospace;
 }
 
+.language-plaintext {
+  border: 1px solid $base02;
+}
+
 pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
 }
