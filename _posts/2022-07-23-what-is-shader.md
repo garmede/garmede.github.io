@@ -36,7 +36,7 @@ license: "CC BY-NC 4.0"
 
 게다가 실상은 GPU가 작동하는 대부분은 CPU에게 명령을 받아 일하는 그림그리는 일꾼 같은 존재이기도 합니다.
 
-![](/assets/images/blog/what-is-shader-cpu-gpu.webp){: .zoom}
+![](/assets/images/blog/what-is-shader-cpu-gpu.webp){: .align-center}
 
 이젠 프로그램 이야기로 가보겠습니다. 컴퓨터나 휴대폰 등의 각종 전자기기가 작동하기 위해서는 프로그램이라는 것이 필요합니다. 프로그램이라는 것들은 0과 1밖에 모른다고 하는데, 어쨌던 기계를 쓸 수 있게 만들어 줍니다.
 
