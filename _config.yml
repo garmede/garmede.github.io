@@ -47,6 +47,9 @@ analytics:
 
 date_format: "%Y년 %m월 %d일"
 
+kramdown:
+  math_engine: katex
+
 author:
   name: "차영곤"
   bio: "어딘가에서 부족하지만 TA로 일하고 있습니다."
