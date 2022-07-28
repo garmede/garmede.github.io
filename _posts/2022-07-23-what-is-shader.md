@@ -30,7 +30,7 @@ license: "CC BY-NC 4.0"
 *[CPU]: Central Processing Unit(중앙 처리 장치)
 *[GPU]: Graphic Processing Unit(그래픽 처리 장치)
 
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/-P28LKWTzrI" title="Mythbusters Demo GPU versus CPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+{% include video id="-P28LKWTzrI" provider="youtube" %}
 
 이 영상도 마찬가지지만 많은 곳에서 CPU와 GPU가 각자 따로 작동하는 것처럼 표현되어 있습니다. 그리고 많은 곳에서 CPU vs GPU 같은 식으로 서로 어느 것이 더 나은지 비교하는 글들도 많습니다. 위에서 말했듯이 CPU와 GPU는 서로 작동방식이 꽤나 다릅니다.
 
