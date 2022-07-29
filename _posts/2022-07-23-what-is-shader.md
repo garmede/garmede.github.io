@@ -36,7 +36,7 @@ license: "CC BY-NC 4.0"
 
 게다가 실상은 GPU가 작동하는 대부분은 CPU에게 명령을 받아 일하는 그림그리는 일꾼 같은 존재이기도 합니다.
 
-![](/assets/images/blog/what-is-shader-cpu-gpu.webp){: .align-center}
+![](/assets/images/blog/what-is-shader-cpu-gpu.webp){: .zoom .align-center}
 
 이젠 프로그램 이야기로 가보겠습니다. 컴퓨터나 휴대폰 등의 각종 전자기기가 작동하기 위해서는 프로그램이라는 것이 필요합니다. 프로그램이라는 것들은 0과 1밖에 모른다고 하는데, 어쨌던 기계를 쓸 수 있게 만들어 줍니다.
 
@@ -49,7 +49,7 @@ license: "CC BY-NC 4.0"
 **<i class="fa-solid fa-circle-info"></i> 버텍스? 정점?**<br/>버텍스는 3차원 개체를 이루는 점, 선, 면 중 '점'의 영어입니다. 정점으로 번역이 많이되어 있는데 전 버텍스로 음차하여 사용하도록 하겠습니다. 둘다 옳은 방법이며, 반박시 여러분의 말이 맞습니다.
 {: .notice--info}
 
-![](/assets/images/blog/what-is-shader-vertex-count.webp){: .zoom}
+![](/assets/images/blog/what-is-shader-vertex-count.webp){: .zoom .align-center}
 
 지금 여러분이 보고 계신 화면이나 게임, 혹은 CG라고 뭉뚱그려 부르는 각종 영화나 영상들의 특수효과들도 비슷한 구조를 가지고 있습니다. 이 구조는 용도에 따라 달라지지만, 일반적으로 *버텍스 셰이더 → 레스터라이저 → 픽셀 셰이더*의 흐름으로 진행됩니다.
 

@@ -4,7 +4,7 @@ categories: [Tutorial]
 tags: [셰이더, 머티리얼, 유니티]
 excerpt: "유니티에서 셰이더 파라미터를 사용할 수 있도록 외부로 노출하는 방법을 알아 봅니다."
 # header:
-#   overlay_image: /assets/images/blog/what-is-shader.webp
+#   overlay_image: /assets/images/tutorial/what-is-shader.webp
 #   overlay_filter: 0.7
 toc: true
 toc_sticky: true
@@ -50,7 +50,7 @@ license: "CC BY-NC 4.0"
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-hdr.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-hdr.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-hdr | markdownify }}</div>
@@ -120,7 +120,7 @@ license: "CC BY-NC 4.0"
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-noscaleoffset.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-noscaleoffset.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-noscaleoffset | markdownify }}</div>
@@ -138,7 +138,7 @@ license: "CC BY-NC 4.0"
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-normal.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-normal.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-normal | markdownify }}</div>
@@ -158,7 +158,7 @@ license: "CC BY-NC 4.0"
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-perrenderdata.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-perrenderdata.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-perrenderdata | markdownify }}</div>

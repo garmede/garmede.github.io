@@ -24,21 +24,21 @@ license: "CC BY-NC 4.0"
 
 유니티의 프로젝트 윈도에서 원하는 위치로 이동 후 오른 클릭 해서 **Create → Shader → Unlit Shader** 로 셰이더를 만듭니다.
 
-![](/assets/images/blog/expose-shader-parameters-unity-new-shader.webp){: .zoom}
+![](/assets/images/tutorial/expose-shader-parameters-unity-new-shader.webp){: .zoom}
 
 적당한 셰이더 파일 이름을 정해 주고, 만든 셰이더 파일을 오른 클릭 해서 **Create → Material** 로 해당 셰이더 파일을 사용하는 머티리얼을 만들어 보겠습니다.
 
-![](/assets/images/blog/expose-shader-parameters-unity-new-material.webp){: .zoom}
+![](/assets/images/tutorial/expose-shader-parameters-unity-new-material.webp){: .zoom .align-center}
 
 **<i class="fa-solid fa-circle-info"></i> 정보**<br/>이렇게 머티리얼과 셰이더를 꼭 함께 만들 필요는 없습니다. 이름도 얼마든지 마음껏 만들어도 괜찮습니다. 셰이더와 머티리얼 각자 필요한 위치에 만들어도 무관합니다. 머티리얼이 셰이더와 연결되어 있지 않다면 머티리얼을 선택후 인스펙터에서 다음과 같이 셰이더를 선택하면 됩니다.<br/><br/>위 예제대로라면 **Unlit → NewUnlitShader**로 찾을 수 있습니다.<br/><br/>
-![](/assets/images/blog/expose-shader-parameters-unity-shader-material.webp){: .align-center}
+![](/assets/images/tutorial/expose-shader-parameters-unity-shader-material.webp){: .align-center}
 {: .notice--info}
 
 ## 셰이더 프로퍼티
 
 만들어진 머티리얼을 선택해 보면 드디어 머티리얼 프로퍼티를 볼 수 있습니다.
 
-![](/assets/images/blog/expose-shader-parameters-unity-material-properties.webp){: .align-center}
+![](/assets/images/tutorial/expose-shader-parameters-unity-material-properties.webp){: .align-center}
 
 만들어진 셰이더 파일을 더블클릭해서 셰이더 파일을 수정해 보겠습니다.
 
@@ -69,11 +69,11 @@ Shader "Unlit/NewUnlitShader"
 
 이제 남은 부분만을 가지고 실제 보이는 머티리얼에 어떻게 적용되는지 보면 다음과 같습니다.
 
-![](/assets/images/blog/expose-shader-parameters-unity-properties01.webp){: .zoom}
+![](/assets/images/tutorial/expose-shader-parameters-unity-properties01.webp){: .zoom}
 
 위 이미지를 보시면 각 부분이 유니티에서 어떻게 표현되고 있는지 아실 수 있을 것입니다. 좀 더 자세히 들여다보겠습니다.
 
-![](/assets/images/blog/expose-shader-parameters-unity-properties02.svg){: .zoom}
+![](/assets/images/tutorial/expose-shader-parameters-unity-properties02.svg){: .zoom}
 
 괄호나 `=`, `,`같은 기호들은 자리를 나눠주는 역할을 합니다. 각 부분의 역할은 다음과 같습니다.
 - **변수 이름**: 이 이름을 통해 셰이더 안에서 사용할 이름입니다. 그러므로 다른 변수들과 이름이 *중복되어서는 안 됩니다*.
@@ -108,7 +108,7 @@ _Integer ("정수", Integer) = 1
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-integer.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-integer.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-integer | markdownify }}</div>
@@ -126,7 +126,7 @@ _Float ("실수", Float) = 1.0
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-float.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-float.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-float | markdownify }}</div>
@@ -144,7 +144,7 @@ _Range ("실수 범위", Range(-1.0, 1.0)) = 0.0
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-range.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-range.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-range | markdownify }}</div>
@@ -166,7 +166,7 @@ _Vector ("벡터", Vector) = (1.0, 1.0, 1.0, 1.0)
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-vector.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-vector.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-vector | markdownify }}</div>
@@ -184,7 +184,7 @@ _Color ("색", Color) = (1.0, 1.0, 1.0, 1.0)
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-color.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-color.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-color | markdownify }}</div>
@@ -218,7 +218,7 @@ _Texture2D ("2D 텍스처", 2D) = "white" {}
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-2d-texture.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-2d-texture.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-2d | markdownify }}</div>
@@ -236,7 +236,7 @@ _Texture3D ("3D 텍스처", 3D) = "white" {}
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-3d-texture.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-3d-texture.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-3d | markdownify }}</div>
@@ -254,7 +254,7 @@ _TextureCube ("Cube 텍스처", Cube) = "white" {}
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-cube-texture.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-cube-texture.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-cube | markdownify }}</div>
@@ -272,7 +272,7 @@ _Texture2DArray ("2DArray 텍스처", 2DArray) = "white" {}
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-2darray-texture.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-2darray-texture.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-2darray | markdownify }}</div>
@@ -290,7 +290,7 @@ _TextureCubeArray ("Cube Array 텍스처", CubeArray) = "white" {}
 
 **<i class="fa-solid fa-right-from-bracket"></i> 출력**
 
-![](/assets/images/blog/expose-shader-parameters-unity-cubearray-texture.webp)
+![](/assets/images/tutorial/expose-shader-parameters-unity-cubearray-texture.webp)
 {% endcapture %}
 
 <div class="notice">{{ notice-cubearray | markdownify }}</div>
