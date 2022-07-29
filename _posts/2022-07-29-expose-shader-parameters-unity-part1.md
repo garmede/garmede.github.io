@@ -1,6 +1,6 @@
 ---
 title: "유니티 셰이더 파라미터 노출하기 1부"
-categories: [Blog]
+categories: [Tutorial]
 tags: [셰이더, 머티리얼, 유니티]
 excerpt: "유니티에서 셰이더 파라미터를 사용할 수 있도록 외부로 노출하는 방법을 알아 봅니다."
 toc: true
