@@ -23,7 +23,7 @@ title: "GeoGon"
 title_separator: " | "
 subtitle: "그래픽 노트"
 description: >- # this means to ignore newlines until "baseurl:"
-  그래픽에 대한 생각도 정리할 겸 소소하게 기록을 남겨 두는 블로그입니다.
+  그래픽에 대한 자료정리 하면서 소소하게 기록을 남겨 두는 블로그입니다.
 repository: garmede/garmede.github.io
 teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: "/assets/images/88x88.webp"
@@ -52,8 +52,8 @@ kramdown:
 
 author:
   name: "차영곤"
-  bio: "어딘가에서 부족하지만 TA로 일하고 있습니다."
-  location: "경기도 성남"
+  bio: "TA일을 열심히 하고 있습니다."
+  location: "경기도 용인"
   email: garmede@gmail.com
   avatar: "/assets/images/bio-photo.webp"
   links:

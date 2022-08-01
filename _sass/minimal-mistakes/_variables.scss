@@ -79,7 +79,7 @@ $warning-color: #d67f05 !default;
 $danger-color: #ee5f5b !default;
 $info-color: #3b9cba !default;
 $focus-color: $primary-color !default;
-$active-color: rgba(126, 126, 126, 0.5) !default; //mix(#fff, $primary-color, 20%)
+$active-color: rgba(74, 107, 139, 0.5) !default; //mix(#fff, $primary-color, 20%)
 
 /* YIQ color contrast */
 $yiq-contrasted-dark-default: $dark-gray !default;
@@ -159,9 +159,9 @@ $max-width: $x-large !default;
    Grid
    ========================================================================== */
 
-$right-sidebar-width-narrow: 150px !default; // default 200
-$right-sidebar-width: 200px !default;        // default 300
-$right-sidebar-width-wide: 300px !default;   // default 400
+$right-sidebar-width-narrow: 200px !default; // default 200
+$right-sidebar-width: 250px !default;        // default 300
+$right-sidebar-width-wide: 350px !default;   // default 400
 
 /*
    Other
