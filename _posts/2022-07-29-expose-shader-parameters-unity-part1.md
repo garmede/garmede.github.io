@@ -1,5 +1,5 @@
 ---
-title: "유니티 셰이더 파라미터 노출하기 1부"
+title: "유니티 셰이더 파라미터 노출하기 1부 - 프로퍼티"
 categories: [Tutorial]
 tags: [셰이더, 머티리얼, 유니티]
 excerpt: "유니티에서 셰이더 파라미터를 사용할 수 있도록 외부로 노출하는 방법을 알아 봅니다."
@@ -59,7 +59,7 @@ Shader "Unlit/NewUnlitShader"
 }
 ```
 
-**<i class="fa-solid fa-circle-info"></i> 정보**<br/>유니티의 `.shader`파일에서 실제 셰이더 부분은 일반적으로 `CGPROGRAM`에서 부터 `ENDCG` 사이의 내용입니다. 혹은 사용하는 언어나 목적에 따라 `HLSLPROGRAM`...`ENDHLSL`이거나 `GLSLPROGRAM`...`ENDGLSL`일 수도 있습니다.<br/><br/>이 이야기는 저 영역외부의 내용들은 *셰이더가 아니라는 뜻*입니다. 저 영역의 바깥쪽은 [ShaderLab](https://docs.unity3d.com/kr/current/Manual/SL-Reference.html)이라고 부르는 유니티에서 셰이더를 관리하기 위한 스크립트입니다.
+**<i class="fa-solid fa-circle-info"></i> 정보**<br/>유니티의 `.shader`파일에서 실제 셰이더 부분은 일반적으로 `CGPROGRAM`에서 부터 `ENDCG` 사이의 내용입니다. 혹은 사용하는 언어나 목적에 따라 `HLSLPROGRAM`...`ENDHLSL`이거나 `GLSLPROGRAM`...`ENDGLSL`일 수도 있습니다.<br/><br/>즉, 그 밖의 내용들은 *셰이더가 아니라는 뜻*입니다. 셰이더가 아닌 부분은 [ShaderLab](https://docs.unity3d.com/kr/current/Manual/SL-Reference.html)이라고 부르는 유니티에서 셰이더를 관리하기 위한 스크립트입니다.
 {: .notice--info}
 
 ### 셰이더 프로퍼티 문법
