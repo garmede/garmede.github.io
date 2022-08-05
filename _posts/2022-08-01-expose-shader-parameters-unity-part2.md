@@ -2,7 +2,7 @@
 title: "유니티 셰이더 파라미터 노출하기 2부 - 어트리뷰트(속성)"
 categories: [Tutorial]
 tags: [셰이더, 머티리얼, 유니티]
-excerpt: "유니티에서 셰이더 파라미터를 사용할 수 있도록 외부로 노출하는 방법을 알아 봅니다."
+excerpt: "유니티에서 셰이더 파라미터를 더 다양하게 사용할 수 있는 속성에 대해서 알아 봅니다."
 toc: true
 toc_sticky: true
 katex: true
