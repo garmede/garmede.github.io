@@ -91,7 +91,7 @@ defaults:
       layout: post
       comments: true
       toc: true
-      permalink: /:categories/:title
+      permalink: ":categories/:title"
   - scope:
       path: _drafts
     values:
