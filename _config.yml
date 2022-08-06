@@ -1,7 +1,7 @@
 # The Site Configuration
 
 theme: jekyll-theme-chirpy
-baseurl: https://garmede.github.io
+# baseurl: https://garmede.github.io
 
 lang: ko-KR
 prefer_datetime_locale: ko
