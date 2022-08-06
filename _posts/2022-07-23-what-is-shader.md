@@ -2,12 +2,13 @@
 title: "셰이더란?"
 categories: [Blog]
 tags: [셰이더]
-excerpt: "게임을 하다가, 그래픽 작업을 하다가, 혹은 어디선가 들어 본 셰이더. 이게 과연 무엇을 하는 것일까요?"
-header:
-  overlay_image: /assets/images/blog/what-is-shader.webp
-  overlay_filter: 0.7
-use_zoom: true
-license: "CC BY-NC 4.0"
+# excerpt: "게임을 하다가, 그래픽 작업을 하다가, 혹은 어디선가 들어 본 셰이더. 이게 과연 무엇을 하는 것일까요?"
+# header:
+#   overlay_image: /assets/img/blog/what-is-shader.webp
+#   overlay_filter: 0.7
+# use_zoom: true
+# license: "CC BY-NC 4.0"
+author: gon
 ---
 게임을 좀 하다 보면 듣게 되는 **셰이더**라는 것에 궁금함을 가져본 적이 있나요? 셰이더가 무엇인지 알쏭달쏭한 사람도 있고, 확실히 안다고 생각하는 사람도 있습니다. 하지만 막상 실체를 알기엔 많은 부분이 숨겨져 있습니다.
 
@@ -20,7 +21,7 @@ license: "CC BY-NC 4.0"
 
 사실 셰이더는 정말 많은 곳에서 사용되고 있습니다. 여러분이 지금 보고 있는 화면(컴퓨터 모니터나, 휴대폰 화면 등)에 보이는 많은 것들도 내부적으로는 셰이더라는 녀석이 돌고 있을 수 있습니다. 그저 인터넷만 하고 있어도 GPU 사용량을 보면 뭔가 돌아가는 모습을 볼 수도 있습니다. 유튜브라도 보면 더 열심히 돌아갈 수도 있죠.
 
-![](/assets/images/blog/what-is-shader-use-gpu.webp){: .align-center}
+![](/assets/img/blog/what-is-shader-use-gpu.webp){: .align-center}
 
 셰이더를 설명하려면 뜬금 없겠지만 일단 기계 이야기부터 해야 합니다. 컴퓨터(혹은 휴대폰)에서 CPU라는 녀석은 지금 여러분이 보고 있는 화면을 *그리기*에 그다지 효율적이지 않습니다. 태생이 *한번에 한 가지*를 잘하기 위해 태어났기 때문입니다. 그래서 GPU라는 화면을 그리는데 더 빠르고 효율적인 녀석을 만들었습니다.
 
@@ -30,13 +31,11 @@ license: "CC BY-NC 4.0"
 *[CPU]: Central Processing Unit(중앙 처리 장치)
 *[GPU]: Graphic Processing Unit(그래픽 처리 장치)
 
-{% include video id="-P28LKWTzrI" provider="youtube" %}
-
 이 영상도 마찬가지지만 많은 곳에서 CPU와 GPU가 각자 따로 작동하는 것처럼 표현되어 있습니다. 그리고 많은 곳에서 CPU vs GPU 같은 식으로 서로 어느 것이 더 나은지 비교하는 글들도 많습니다. 위에서 말했듯이 CPU와 GPU는 서로 작동방식이 꽤나 다릅니다.
 
 게다가 실상은 GPU가 작동하는 대부분은 CPU에게 명령을 받아 일하는 그림그리는 일꾼 같은 존재이기도 합니다.
 
-![](/assets/images/blog/what-is-shader-cpu-gpu.webp){: .zoom .align-center}
+![](/assets/img/blog/what-is-shader-cpu-gpu.webp){: .align-center}
 
 이젠 프로그램 이야기로 가보겠습니다. 컴퓨터나 휴대폰 등의 각종 전자기기가 작동하기 위해서는 프로그램이라는 것이 필요합니다. 프로그램이라는 것들은 0과 1밖에 모른다고 하는데, 어쨌던 기계를 쓸 수 있게 만들어 줍니다.
 
@@ -49,7 +48,7 @@ license: "CC BY-NC 4.0"
 **<i class="fa-solid fa-circle-info"></i> 버텍스? 정점?**<br/>버텍스는 3차원 개체를 이루는 점, 선, 면 중 '점'의 영어입니다. 정점으로 번역이 많이되어 있는데 전 버텍스로 음차하여 사용하도록 하겠습니다. 둘다 옳은 방법이며, 반박시 여러분의 말이 맞습니다.
 {: .notice--info}
 
-![](/assets/images/blog/what-is-shader-vertex-count.webp){: .zoom .align-center}
+![](/assets/img/blog/what-is-shader-vertex-count.webp){: .align-center}
 
 지금 여러분이 보고 계신 화면이나 게임, 혹은 CG라고 뭉뚱그려 부르는 각종 영화나 영상들의 특수효과들도 비슷한 구조를 가지고 있습니다. 이 구조는 용도에 따라 달라지지만, 일반적으로 *버텍스 셰이더 → 레스터라이저 → 픽셀 셰이더*의 흐름으로 진행됩니다.
 
