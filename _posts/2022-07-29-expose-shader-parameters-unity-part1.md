@@ -25,23 +25,23 @@ author: gon
 
 유니티의 프로젝트 윈도에서 원하는 위치로 이동 후 오른 클릭 해서 **Create → Shader → Unlit Shader** 로 셰이더를 만듭니다.
 
-![](assets/img/tutorial/expose-shader-parameters-unity-new-shader.webp)
+![](/assets/img/tutorial/expose-shader-parameters-unity-new-shader.webp)
 
 적당한 셰이더 파일 이름을 정해 주고, 만든 셰이더 파일을 오른 클릭 해서 **Create → Material** 로 해당 셰이더 파일을 사용하는 머티리얼을 만들어 보겠습니다.
 
-![](assets/img/tutorial/expose-shader-parameters-unity-new-material.webp){: .align-center}
+![](/assets/img/tutorial/expose-shader-parameters-unity-new-material.webp){: .align-center}
 
 > 머티리얼과 셰이더를 꼭 함께 만들 필요는 없습니다. 이름도 얼마든지 마음껏 만들어도 괜찮습니다. 셰이더와 머티리얼 각자 필요한 위치에 만들어도 무관합니다. 머티리얼이 셰이더와 연결되어 있지 않다면 머티리얼을 선택후 인스펙터에서 다음과 같이 셰이더를 선택하면 됩니다.
 >
 > 위 예제대로라면 **Unlit → NewUnlitShader**로 찾을 수 있습니다.
-> ![](assets/img/tutorial/expose-shader-parameters-unity-shader-material.webp){: .align-center}
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-shader-material.webp){: .align-center}
 {: .prompt-tip }
 
 ## 셰이더 프로퍼티
 
 만들어진 머티리얼을 선택해 보면 드디어 머티리얼 프로퍼티를 볼 수 있습니다.
 
-![](assets/img/tutorial/expose-shader-parameters-unity-material-properties.webp){: .align-center}
+![](/assets/img/tutorial/expose-shader-parameters-unity-material-properties.webp){: .align-center}
 
 만들어진 셰이더 파일을 더블클릭해서 셰이더 파일을 수정해 보겠습니다.
 
@@ -76,11 +76,11 @@ Shader "Unlit/NewUnlitShader"
 
 이제 남은 부분만을 가지고 실제 보이는 머티리얼에 어떻게 적용되는지 보면 다음과 같습니다.
 
-![](assets/img/tutorial/expose-shader-parameters-unity-properties01.webp)
+![](/assets/img/tutorial/expose-shader-parameters-unity-properties01.webp)
 
 위 이미지를 보시면 각 부분이 유니티에서 어떻게 표현되고 있는지 아실 수 있을 것입니다. 좀 더 자세히 들여다보겠습니다.
 
-![](assets/img/tutorial/expose-shader-parameters-unity-properties02.svg)
+![](/assets/img/tutorial/expose-shader-parameters-unity-properties02.svg)
 
 괄호나 `=`, `,`같은 기호들은 자리를 나눠주는 역할을 합니다. 각 부분의 역할은 다음과 같습니다.
 - **변수 이름**: 이 이름을 통해 셰이더 안에서 사용할 이름입니다. 그러므로 다른 변수들과 이름이 *중복되어서는 안 됩니다*.
@@ -116,7 +116,7 @@ Shader "Unlit/NewUnlitShader"
 >   ```
 >   {: file='shader' .nolineno}
 > - **출력**\
->   ![](assets/img/tutorial/expose-shader-parameters-unity-integer.webp)
+>   ![](/assets/img/tutorial/expose-shader-parameters-unity-integer.webp)
 {: .prompt-info }
 
 #### `Float`
@@ -129,7 +129,7 @@ Shader "Unlit/NewUnlitShader"
 >   ```
 >   {: file='shader' .nolineno}
 > - **출력**\
-> ![](assets/img/tutorial/expose-shader-parameters-unity-float.webp)
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-float.webp)
 {: .prompt-info }
 
 #### `Range`
@@ -142,7 +142,7 @@ Shader "Unlit/NewUnlitShader"
 >   ```
 >   {: file='shader' .nolineno}
 > - **출력**\
-> ![](assets/img/tutorial/expose-shader-parameters-unity-range.webp)
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-range.webp)
 {: .prompt-info }
 
 ### 벡터
@@ -159,7 +159,7 @@ Shader "Unlit/NewUnlitShader"
 >   ```
 >   {: file='shader' .nolineno}
 > - **출력**\
-> ![](assets/img/tutorial/expose-shader-parameters-unity-vector.webp)
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-vector.webp)
 {: .prompt-info }
 
 #### `Color`
@@ -172,7 +172,7 @@ Shader "Unlit/NewUnlitShader"
 >   ```
 >   {: file='shader' .nolineno}
 > - **출력**\
-> ![](assets/img/tutorial/expose-shader-parameters-unity-color.webp)
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-color.webp)
 {: .prompt-info }
 
 ### 텍스처
@@ -201,7 +201,7 @@ Shader "Unlit/NewUnlitShader"
 >   ```
 >   {: file='shader' .nolineno}
 > - **출력**\
-> ![](assets/img/tutorial/expose-shader-parameters-unity-2d-texture.webp)
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-2d-texture.webp)
 {: .prompt-info }
 
 #### `3D`
@@ -214,7 +214,7 @@ Shader "Unlit/NewUnlitShader"
 >   ```
 >   {: file='shader' .nolineno}
 > - **출력**\
-> ![](assets/img/tutorial/expose-shader-parameters-unity-3d-texture.webp)
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-3d-texture.webp)
 {: .prompt-info }
 
 #### `Cube`
@@ -227,7 +227,7 @@ Shader "Unlit/NewUnlitShader"
 >   ```
 >   {: file='shader' .nolineno}
 > - **출력**\
-> ![](assets/img/tutorial/expose-shader-parameters-unity-cube-texture.webp)
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-cube-texture.webp)
 {: .prompt-info }
 
 #### `2DArray`
@@ -240,7 +240,7 @@ Shader "Unlit/NewUnlitShader"
 >   ```
 >   {: file='shader' .nolineno}
 > - **출력**\
-> ![](assets/img/tutorial/expose-shader-parameters-unity-2darray-texture.webp)
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-2darray-texture.webp)
 {: .prompt-info }
 
 #### `CubeArray`
@@ -253,7 +253,7 @@ Shader "Unlit/NewUnlitShader"
 >   ```
 >   {: file='shader' .nolineno}
 > - **출력**\
-> ![](assets/img/tutorial/expose-shader-parameters-unity-cubearray-texture.webp)
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-cubearray-texture.webp)
 {: .prompt-info }
 
 ## 참조
