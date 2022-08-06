@@ -1,7 +1,7 @@
 # The Site Configuration
 
 theme: jekyll-theme-chirpy
-baseurl: ''
+baseurl: https://garmede.github.io
 
 lang: ko-KR
 prefer_datetime_locale: ko
@@ -91,7 +91,7 @@ defaults:
       layout: post
       comments: true
       toc: true
-      permalink: ":categories/:title"
+      permalink: "/:categories/:title"
   - scope:
       path: _drafts
     values:
