@@ -1,61 +1,37 @@
 # The Site Configuration
 
-# Import the theme
 theme: jekyll-theme-chirpy
-# remote_theme: cotes2020/jekyll-theme-chirpy
+baseurl: ''
 
-# Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
-# and doesn't have a custom domain.
-# baseurl: ''
-
-# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
-# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
-# otherwise, the layout language will use the default value of 'en'.
 lang: ko-KR
-
-# Additional parameters for datetime localization, optional. › https://github.com/iamkun/dayjs/tree/dev/src/locale
 prefer_datetime_locale: ko
-
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: Asia/Seoul
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
-# ↓ --------------------------
+title: GeoGon
 
-title: GeoGon                          # the main title
+tagline: 그래픽 노트
 
-tagline: 그래픽 노트   # it will display as the sub-title
-
-description: >-                        # used by seo meta and the atom feed
+description: >-
   그래픽에 대한 자료정리 하면서 소소하게 기록을 남겨 두는 블로그입니다.
 
-# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://garmede.github.io'
+url: https://garmede.github.io
 
 github:
-  username: garmede             # change to your github username
+  username: garmede
 
 twitter:
-  username: Yungon            # change to your twitter username
+  username: Yungon
 
 social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: 차영곤
-  email: garmede@gmail.com             # change to your email address
+  email: garmede@gmail.com
   links:
-    # The first element serves as the copyright owner's link
-    - https://github.com/garmede       # change to your github homepage
-    # - https://twitter.com/Yungon      # change to your twitter homepage
-    # Uncomment below to add more social links
+    - https://github.com/garmede
+    # - https://twitter.com/Yungon
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-google_site_verification: 9b8zgCbYftCEyB-dh5z-S0JfXU5sG4-f4CYFGefCCSw # fill in to your verification string
-
-# ↑ --------------------------
-# The end of `jekyll-seo-tag` settings
-
+google_site_verification: 9b8zgCbYftCEyB-dh5z-S0JfXU5sG4-f4CYFGefCCSw
 google_analytics:
   id: G-K2Z8Z9ZXSL     # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
@@ -63,69 +39,38 @@ google_analytics:
   #  proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
   #  cache_path:       # the local PV cache data, friendly to visitors from GFW region
 
-# Prefer color scheme setting.
-#
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
-#
-# Available options:
-#
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
-#
 theme_mode: # [dark|light]
 
-# The CDN endpoint for images.
-# Notice that once it is assigned, the CDN url
-# will be added to all image (site avatar & posts' images) paths starting with '/'
-#
 # e.g. 'https://cdn.com'
 # img_cdn:
 
-# the avatar on sidebar, support local or CORS resources
 avatar: /assets/img/88x88.webp
 
-# boolean type, the global switch for ToC in posts.
 toc: true
 
 comments:
-  active: 'giscus'         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
-  # disqus:
-    # shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
-  # utterances:
-    # repo:         # <gh-username>/<repo>
-    # issue_term:   # < url | pathname | title | ...>
-  # Giscus options › https://giscus.app
+  active: giscus
   giscus:
-    repo: 'garmede/garmede.github.io' # <gh-username>/<repo>
-    repo_id: 'MDEwOlJlcG9zaXRvcnkzNzI0ODkzODg='
-    category: 'General'
-    category_id: 'DIC_kwDOFjO8rM4CQpqE'
-    mapping: 'og:title'      # optional, default to 'pathname'
-    input_position: 'bottom' # optional, default to 'bottom'
-    lang: 'ko'       # optional, default to the value of `site.lang`
-
-# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+    repo: garmede/garmede.github.io
+    repo_id: MDEwOlJlcG9zaXRvcnkzNzI0ODkzODg=
+    category: General
+    category_id: DIC_kwDOFjO8rM4CQpqE
+    mapping: og:title
+    input_position: bottom
+    lang: ko
 assets:
   self_host:
-    enabled:      # boolean, keep empty means false
-    # specify the Jekyll environment, empty means both
-    # only works if `assets.self_host.enabled` is 'true'
-    env:          # [development|production]
+    enabled:
+    env:
 
 pwa:
-  enabled: true   # the option for PWA feature
+  enabled: true
 
 paginate: 10
 
-# ------------ The following options are not recommended to be modified ------------------
-
 kramdown:
   syntax_highlighter: rouge
-  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+  syntax_highlighter_opts:
     css_class: highlight
     # default_lang: console
     span:
@@ -141,14 +86,12 @@ collections:
 
 defaults:
   - scope:
-      path: ''          # An empty string here means all files in the project
+      path: ''
       type: posts
     values:
       layout: post
-      comments: true    # Enable comments in posts.
-      toc: true         # Display TOC column in posts.
-      # DO NOT modify the following parameter unless you are confident enough
-      # to update the code of all other post links in this project.
+      comments: true
+      toc: true
       permalink: /:categories/:title
   - scope:
       path: _drafts
@@ -159,7 +102,7 @@ defaults:
       type: tabs             # see `site.collections`
     values:
       layout: page
-      permalink: /:title/
+      permalink: /:title
   - scope:
       path: assets/img/favicons
     values:
