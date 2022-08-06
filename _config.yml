@@ -60,8 +60,7 @@ comments:
     lang: ko
 assets:
   self_host:
-    enabled:
-    env:
+    enabled: true
 
 pwa:
   enabled: true
