@@ -35,8 +35,8 @@ url: 'https://garmede.github.io'
 github:
   username: garmede             # change to your github username
 
-# twitter:
-#   username: Yungon            # change to your twitter username
+twitter:
+  username: Yungon            # change to your twitter username
 
 social:
   # Change to your full name.
@@ -45,8 +45,8 @@ social:
   email: garmede@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    # - https://twitter.com/Yungon      # change to your twitter homepage
     - https://github.com/garmede       # change to your github homepage
+    # - https://twitter.com/Yungon      # change to your twitter homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username

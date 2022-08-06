@@ -31,10 +31,11 @@ author: gon
 
 ![](/assets/img/tutorial/expose-shader-parameters-unity-new-material.webp){: .align-center}
 
-> 이렇게 머티리얼과 셰이더를 꼭 함께 만들 필요는 없습니다. 이름도 얼마든지 마음껏 만들어도 괜찮습니다. 셰이더와 머티리얼 각자 필요한 위치에 만들어도 무관합니다. 머티리얼이 셰이더와 연결되어 있지 않다면 머티리얼을 선택후 인스펙터에서 다음과 같이 셰이더를 선택하면 됩니다.
+> 머티리얼과 셰이더를 꼭 함께 만들 필요는 없습니다. 이름도 얼마든지 마음껏 만들어도 괜찮습니다. 셰이더와 머티리얼 각자 필요한 위치에 만들어도 무관합니다. 머티리얼이 셰이더와 연결되어 있지 않다면 머티리얼을 선택후 인스펙터에서 다음과 같이 셰이더를 선택하면 됩니다.
+>
 > 위 예제대로라면 **Unlit → NewUnlitShader**로 찾을 수 있습니다.
 > ![](/assets/img/tutorial/expose-shader-parameters-unity-shader-material.webp){: .align-center}
-{: .prompt-info }
+{: .prompt-tip }
 
 ## 셰이더 프로퍼티
 
@@ -45,7 +46,7 @@ author: gon
 만들어진 셰이더 파일을 더블클릭해서 셰이더 파일을 수정해 보겠습니다.
 
 > 일반적으로 셰이더 파일을 수정하려고 더블클릭하면 대부분 VisualStudio가 실행될 텐데 좋은 에디터입니다만, 다른 에디터를 사용해도 전혀 무관합니다. `.shader`파일은 단순 텍스트 파일이며, 텍스트만 수정할 수 있다면 메모장으로 작업하셔도 좀 불편하긴 해도 작성자체는 가능합니다. 편한 에디터를 사용하세요!
-{: .prompt-info }
+{: .prompt-tip }
 
 ```hlsl
 Shader "Unlit/NewUnlitShader"
@@ -89,9 +90,10 @@ Shader "Unlit/NewUnlitShader"
 - **기본값**: 최초 머티리얼이 만들어졌을 때 사용하는 값입니다. ***유형**에 따라 작성 방법이 다릅니다*.
 
 > 텍스트 에디터에서 셰이더를 수정하고 저장한 다음 유니티에 오면 자동으로 적용이 됩니다.
-> 시험 삼아 **프로퍼티 이름**을 한번 수정해 보시면 바로바로 유니티에 반영되는 것을 보실 수 있습니다.
+> **프로퍼티 이름**을 한번 수정해 보시면 바로바로 유니티에 반영되는 것을 보실 수 있습니다.
+>
 > 혹시 안된다면 어딘가 문법이 틀린 부분이 있을 수 있습니다. 대소문자 구분도 하니 주의 깊게 살펴봐야 합니다. 문제가 해결되지 않는다면 인터넷을 찾아보세요.
-> 그래도 해결되지 않으면 여기 댓글을 한번 남겨 보시면 저의 미천한 실력으로나마 혹시 어쩌면 도움을 드릴 수도 있습니다.:wink:
+> 그래도 해결되지 않으면 여기 댓글을 한번 남겨 보시면 저의 미천한 실력으로나마 혹시 어쩌면 도움을 드릴 수도 있습니다.😜
 {: .prompt-info }
 
 ## 셰이더 프로퍼티 유형
@@ -108,45 +110,39 @@ Shader "Unlit/NewUnlitShader"
 
 [정수](https://ko.wikipedia.org/wiki/정수)를 입력할 수 있습니다. 유니티에서 숫자를 입력해 보면 소수점표현이 되지 않는 것을 볼 수 있습니다. 유니티에서 가장 최근에 생긴 프로퍼티 유형인데, 이전에 사용하던 `Int`유형은 이제 사용하지 않기를 권고하고 있습니다.
 
-> **<i class="fa-solid fa-right-to-bracket"></i> 입력**
-
-```hlsl
-_Integer ("정수", Integer) = 1
-```
-
-**<i class="fa-solid fa-right-from-bracket"></i> 출력**
-
-![](/assets/img/tutorial/expose-shader-parameters-unity-integer.webp)
+> - **입력**
+>   ```hlsl
+>   _Integer ("정수", Integer) = 1
+>   ```
+>   {: file='shader' .nolineno}
+> - **출력**\
+>   ![](/assets/img/tutorial/expose-shader-parameters-unity-integer.webp)
 {: .prompt-info }
 
 #### `Float`
 
 [실수](https://ko.wikipedia.org/wiki/실수)를 입력할 수 있습니다.
 
-> **<i class="fa-solid fa-right-to-bracket"></i> 입력**
-
-```hlsl
-_Float ("실수", Float) = 1.0
-```
-
-**<i class="fa-solid fa-right-from-bracket"></i> 출력**
-
-![](/assets/img/tutorial/expose-shader-parameters-unity-float.webp)
+> - **입력**
+>   ```hlsl
+>   _Float ("실수", Float) = 1.0
+>   ```
+>   {: file='shader' .nolineno}
+> - **출력**\
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-float.webp)
 {: .prompt-info }
 
 #### `Range`
 
 실제 셰이더에서 받는 유형은 `Float`과 동일합니다. 하지만 최소, 최대 값을 정해서 범위를 벗어나지 않게 할 수 있습니다.
 
-> **<i class="fa-solid fa-right-to-bracket"></i> 입력**
-
-```hlsl
-_Range ("실수 범위", Range(-1.0, 1.0)) = 0.0
-```
-
-**<i class="fa-solid fa-right-from-bracket"></i> 출력**
-
-![](/assets/img/tutorial/expose-shader-parameters-unity-range.webp)
+> - **입력**
+>   ```hlsl
+>   _Range ("실수 범위", Range(-1.0, 1.0)) = 0.0
+>   ```
+>   {: file='shader' .nolineno}
+> - **출력**\
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-range.webp)
 {: .prompt-info }
 
 ### 벡터
@@ -157,30 +153,26 @@ _Range ("실수 범위", Range(-1.0, 1.0)) = 0.0
 
 숫자 네 개를 직접 유저가 입력할 수 있습니다. 셰이더에게 숫자 네 개를 묶어 전달하게 됩니다.
 
-> **<i class="fa-solid fa-right-to-bracket"></i> 입력**
-
-```hlsl
-_Vector ("벡터", Vector) = (1.0, 1.0, 1.0, 1.0)
-```
-
-**<i class="fa-solid fa-right-from-bracket"></i> 출력**
-
-![](/assets/img/tutorial/expose-shader-parameters-unity-vector.webp)
+> - **입력**
+>   ```hlsl
+>   _Vector ("벡터", Vector) = (1.0, 1.0, 1.0, 1.0)
+>   ```
+>   {: file='shader' .nolineno}
+> - **출력**\
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-vector.webp)
 {: .prompt-info }
 
 #### `Color`
 
 색도 따지고 보면 R,G,B,A의 네가지 숫자의 모음입니다. 좀 더 직관 적으로 컬러피커를 열어 색상을 선택할 수 있게 해줍니다.
 
-> **<i class="fa-solid fa-right-to-bracket"></i> 입력**
-
-```hlsl
-_Color ("색", Color) = (1.0, 1.0, 1.0, 1.0)
-```
-
-**<i class="fa-solid fa-right-from-bracket"></i> 출력**
-
-![](/assets/img/tutorial/expose-shader-parameters-unity-color.webp)
+> - **입력**
+>   ```hlsl
+>   _Color ("색", Color) = (1.0, 1.0, 1.0, 1.0)
+>   ```
+>   {: file='shader' .nolineno}
+> - **출력**\
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-color.webp)
 {: .prompt-info }
 
 ### 텍스처
@@ -203,75 +195,65 @@ _Color ("색", Color) = (1.0, 1.0, 1.0, 1.0)
 
 일반적인 이미지를 받아 올 수 있습니다. 대부분의 경우 텍스처라고 하면 이것이라고 보면 됩니다.
 
-> **<i class="fa-solid fa-right-to-bracket"></i> 입력**
-
-```hlsl
-_Texture2D ("2D 텍스처", 2D) = "white" {}
-```
-
-**<i class="fa-solid fa-right-from-bracket"></i> 출력**
-
-![](/assets/img/tutorial/expose-shader-parameters-unity-2d-texture.webp)
+> - **입력**
+>   ```hlsl
+>   _Texture2D ("2D 텍스처", 2D) = "white" {}
+>   ```
+>   {: file='shader' .nolineno}
+> - **출력**\
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-2d-texture.webp)
 {: .prompt-info }
 
 #### `3D`
 
 가로와 세로로 픽셀이 있는 2D 이미지를 쌓아 놓았다고 생각하면 맞는 개념입니다. 용량이 해상도의 증가에 따라 기하급수적으로 늘어 나는 특징이 있어 일반적으로 볼류메트릭과 관련된 효과를 쓰는 경우가 아니라면 자주 보기 힘든 유형입니다. 언젠가 다룰 기회가 있다면 다뤄 보도록 하겠습니다.
 
-> **<i class="fa-solid fa-right-to-bracket"></i> 입력**
-
-```hlsl
-_Texture3D ("3D 텍스처", 3D) = "white" {}
-```
-
-**<i class="fa-solid fa-right-from-bracket"></i> 출력**
-
-![](/assets/img/tutorial/expose-shader-parameters-unity-3d-texture.webp)
+> - **입력**
+>   ```hlsl
+>   _Texture3D ("3D 텍스처", 3D) = "white" {}
+>   ```
+>   {: file='shader' .nolineno}
+> - **출력**\
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-3d-texture.webp)
 {: .prompt-info }
 
 #### `Cube`
 
 2D 이미지 여섯 장을 저장하고 있다가 정육면체의 각 면에 펼쳐 놓고 쓰는 방식으로 보면 됩니다. 2D 이미지 여섯 장을 한 번에 처리하게 되며, 360도 모든 곳을 표현하기에 좋은 형식입니다. 반사될 것이나, 360도 모든 곳을 표현해야 하는 스카이 박스 같은 경우 적절합니다.
 
-> **<i class="fa-solid fa-right-to-bracket"></i> 입력**
-
-```hlsl
-_TextureCube ("Cube 텍스처", Cube) = "white" {}
-```
-
-**<i class="fa-solid fa-right-from-bracket"></i> 출력**
-
-![](/assets/img/tutorial/expose-shader-parameters-unity-cube-texture.webp)
+> - **입력**
+>   ```hlsl
+>   _TextureCube ("Cube 텍스처", Cube) = "white" {}
+>   ```
+>   {: file='shader' .nolineno}
+> - **출력**\
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-cube-texture.webp)
 {: .prompt-info }
 
 #### `2DArray`
 
 3D 텍스처와 비슷해 보이지만 용도나 개념이 약간 다릅니다. 같은 크기면서 설정이 같은 여러 이미지를 1장 이상 묶어 두고 사용한다는 개념입니다. 지형 같은 것을 만들 때 여긴 흙밭, 여긴 풀밭 하는 식으로 다양한 재질을 표현할 때 묶음에서 하나씩 골라 표현하는 방법처럼 한곳에 다양한 표현을 할 때 주로 사용합니다.
 
-> **<i class="fa-solid fa-right-to-bracket"></i> 입력**
-
-```hlsl
-_Texture2DArray ("2DArray 텍스처", 2DArray) = "white" {}
-```
-
-**<i class="fa-solid fa-right-from-bracket"></i> 출력**
-
-![](/assets/img/tutorial/expose-shader-parameters-unity-2darray-texture.webp)
+> - **입력**
+>   ```hlsl
+>   _Texture2DArray ("2DArray 텍스처", 2DArray) = "white" {}
+>   ```
+>   {: file='shader' .nolineno}
+> - **출력**\
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-2darray-texture.webp)
 {: .prompt-info }
 
 #### `CubeArray`
 
 같은 크기면서 설정이 같은 큐브맵들을 1개 이상을 묶어 적절할 때 불러와 사용할 수 있도록 만들어 둔 것입니다. 장소에 따라 다른 큐브맵을 묶어서 셰이더에게 넘기고 해당 장소에 등록한 큐브맵을 불러오는 식으로 활용하기도 합니다.
 
-> **<i class="fa-solid fa-right-to-bracket"></i> 입력**
-
-```hlsl
-_TextureCubeArray ("Cube Array 텍스처", CubeArray) = "white" {}
-```
-
-**<i class="fa-solid fa-right-from-bracket"></i> 출력**
-
-![](/assets/img/tutorial/expose-shader-parameters-unity-cubearray-texture.webp)
+> - **입력**
+>   ```hlsl
+>   _TextureCubeArray ("Cube Array 텍스처", CubeArray) = "white" {}
+>   ```
+>   {: file='shader' .nolineno}
+> - **출력**\
+> ![](/assets/img/tutorial/expose-shader-parameters-unity-cubearray-texture.webp)
 {: .prompt-info }
 
 ## 참조

@@ -2,6 +2,8 @@
 title: "셰이더란?"
 categories: [Blog]
 tags: [셰이더]
+image:
+  path: /assets/img/blog/what-is-shader.webp
 # excerpt: "게임을 하다가, 그래픽 작업을 하다가, 혹은 어디선가 들어 본 셰이더. 이게 과연 무엇을 하는 것일까요?"
 # header:
 #   overlay_image: /assets/img/blog/what-is-shader.webp
@@ -16,12 +18,14 @@ author: gon
 
 눈치채신 분들도 있겠지만 무언가 눈에 보이는 것과 셰이더가 관련이 있구나 싶으실 겁니다. 하지만 반대로 왜 이렇게 다양한 곳에서 셰이더라는 단어가 나타나는지 이상하게 생각하는 분들도 있을 것입니다. 게다가 **셰**이더인지 **쉐**이더인지 철자도 여기저기 다 다릅니다. 이게 도대체 무엇이길래?
 
-**<i class="fa-solid fa-circle-info"></i> 셰이더? 쉐이더?**<br/>예전엔 확실히 '**쉐**이더'로 많이 쓰였지만, 위키나 각종 엔진의 한글화 문서도 모두 외래어 표기법에 따라 '**셰**'이더로 변경되고 있습니다.
-{: .notice--info}
+> **셰이더? 쉐이더?**\
+> 예전엔 확실히 '**쉐**이더'로 많이 쓰였지만, 위키나 각종 엔진의 한글화 문서도 모두 외래어 표기법에 따라 '**셰**'이더로 변경되고 있습니다.
+{: .prompt-tip }
 
 사실 셰이더는 정말 많은 곳에서 사용되고 있습니다. 여러분이 지금 보고 있는 화면(컴퓨터 모니터나, 휴대폰 화면 등)에 보이는 많은 것들도 내부적으로는 셰이더라는 녀석이 돌고 있을 수 있습니다. 그저 인터넷만 하고 있어도 GPU 사용량을 보면 뭔가 돌아가는 모습을 볼 수도 있습니다. 유튜브라도 보면 더 열심히 돌아갈 수도 있죠.
 
 ![](/assets/img/blog/what-is-shader-use-gpu.webp){: .align-center}
+*인터넷만 하고 있는데 어디에서 사용하고 있는 것일까요?*
 
 셰이더를 설명하려면 뜬금 없겠지만 일단 기계 이야기부터 해야 합니다. 컴퓨터(혹은 휴대폰)에서 CPU라는 녀석은 지금 여러분이 보고 있는 화면을 *그리기*에 그다지 효율적이지 않습니다. 태생이 *한번에 한 가지*를 잘하기 위해 태어났기 때문입니다. 그래서 GPU라는 화면을 그리는데 더 빠르고 효율적인 녀석을 만들었습니다.
 
@@ -30,6 +34,8 @@ author: gon
 *[SoC]: System on a Chip
 *[CPU]: Central Processing Unit(중앙 처리 장치)
 *[GPU]: Graphic Processing Unit(그래픽 처리 장치)
+
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/-P28LKWTzrI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 이 영상도 마찬가지지만 많은 곳에서 CPU와 GPU가 각자 따로 작동하는 것처럼 표현되어 있습니다. 그리고 많은 곳에서 CPU vs GPU 같은 식으로 서로 어느 것이 더 나은지 비교하는 글들도 많습니다. 위에서 말했듯이 CPU와 GPU는 서로 작동방식이 꽤나 다릅니다.
 
@@ -45,8 +51,9 @@ author: gon
 
 예를 들어 버텍스 셰이더라면 버텍스 단위로 돌아갈 프로그램입니다. 아래 이미지와 같이 버텍스 마다 한번씩 작동하는 GPU프로그램이 버텍스 셰이더 입니다.
 
-**<i class="fa-solid fa-circle-info"></i> 버텍스? 정점?**<br/>버텍스는 3차원 개체를 이루는 점, 선, 면 중 '점'의 영어입니다. 정점으로 번역이 많이되어 있는데 전 버텍스로 음차하여 사용하도록 하겠습니다. 둘다 옳은 방법이며, 반박시 여러분의 말이 맞습니다.
-{: .notice--info}
+> **버텍스? 정점?**\
+> 버텍스는 3차원 개체를 이루는 점, 선, 면 중 '점'의 영어입니다. 정점으로 번역이 많이되어 있는데 전 버텍스로 음차하여 사용하도록 하겠습니다. 둘다 옳은 방법이며, 반박시 여러분의 말이 맞습니다.😏
+{: .prompt-tip }
 
 ![](/assets/img/blog/what-is-shader-vertex-count.webp){: .align-center}
 
