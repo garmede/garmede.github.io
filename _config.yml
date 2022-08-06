@@ -42,7 +42,7 @@ google_analytics:
 theme_mode: # [dark|light]
 
 # e.g. 'https://cdn.com'
-# img_cdn:
+img_cdn: 'https://garmede.github.io'
 
 avatar: /assets/img/88x88.webp
 
