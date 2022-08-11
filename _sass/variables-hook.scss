@@ -14,3 +14,12 @@ body {
 code, kbd, pre, samp {
   font-family: 'Cascadia Mono', 'Source Han Mono', monospace !important;
 }
+
+figure .mfp-title {
+  text-shadow: 3px 3px 10px #000, -3px -3px 10px #000, 3px -3px 10px #000, -3px 3px 10px #000;
+}
+
+.mfp-figure::after {
+  background: unset !important;
+  box-shadow: unset !important;
+}
