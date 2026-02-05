@@ -31,13 +31,31 @@ social:
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-google_site_verification: 9b8zgCbYftCEyB-dh5z-S0JfXU5sG4-f4CYFGefCCSw
-google_analytics:
-  id: G-K2Z8Z9ZXSL     # fill in your Google Analytics ID
-  # Google Analytics pageviews report settings
-  #pv:
-  #  proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
-  #  cache_path:       # the local PV cache data, friendly to visitors from GFW region
+# Site Verification Settings
+webmaster_verifications:
+  google: 9b8zgCbYftCEyB-dh5z-S0JfXU5sG4-f4CYFGefCCSw
+  # bing:
+  # alexa:
+  # yandex:
+  # baidu:
+  # facebook:
+
+# Web Analytics Settings
+analytics:
+  google:
+    id: G-K2Z8Z9ZXSL
+  # goatcounter:
+  #   id:
+  # umami:
+  #   id:
+  #   domain:
+  # matomo:
+  #   id:
+  #   domain:
+  # cloudflare:
+  #   id:
+  # fathom:
+  #   id:
 
 theme_mode: # [dark|light]
 
@@ -49,21 +67,42 @@ avatar: /assets/img/88x88.webp
 toc: true
 
 comments:
-  active: giscus
+  # Global switch for the post-comment system. Keeping it empty means disabled.
+  provider: giscus  # [disqus | utterances | giscus]
+  # Disqus options (https://disqus.com/)
+  disqus:
+    shortname:
+  # Utterances options (https://utteranc.es/)
+  utterances:
+    repo:
+    issue_term:
+  # Giscus options (https://giscus.app)
   giscus:
     repo: garmede/garmede.github.io
     repo_id: MDEwOlJlcG9zaXRvcnkzNzI0ODkzODg=
     category: General
     category_id: DIC_kwDOFjO8rM4CQpqE
     mapping: og:title
+    strict: 0
     input_position: bottom
     lang: ko
+    reactions_enabled: 1
 assets:
   self_host:
     enabled: true
+    # specify the Jekyll environment, empty means both
+    # only works if `assets.self_host.enabled` is 'true'
+    env:
 
 pwa:
   enabled: true
+  cache:
+    enabled: true
+    # Paths defined here will be excluded from the PWA cache.
+    # Usually its value is the `baseurl` of another website that
+    # temporary use this domain
+    deny_paths:
+      # - /hierarchical/path
 
 paginate: 10
 

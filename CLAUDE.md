@@ -16,8 +16,8 @@
 
 | 구성요소 | 기술 |
 |---------|------|
-| 정적 사이트 생성기 | Jekyll 4.2.2 |
-| 테마 | jekyll-theme-chirpy (~> 5.2.1) |
+| 정적 사이트 생성기 | Jekyll 4.3+ |
+| 테마 | jekyll-theme-chirpy (~> 7.4) |
 | 언어 | Ruby |
 | 마크다운 프로세서 | Kramdown (GFM 지원) |
 | 구문 강조 | Rouge |
