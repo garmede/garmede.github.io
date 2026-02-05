@@ -1,149 +1,149 @@
-# CLAUDE.md - AI Assistant Guide for GeoGon Blog
+# CLAUDE.md - GeoGon 블로그 AI 어시스턴트 가이드
 
-This document provides comprehensive guidance for AI assistants working with the GeoGon blog repository.
+이 문서는 GeoGon 블로그 저장소에서 작업하는 AI 어시스턴트를 위한 종합 가이드입니다.
 
-## Project Overview
+## 프로젝트 개요
 
-**GeoGon** is a personal technical blog about computer graphics, written in Korean. The site focuses on shaders, rendering, game engines, and technical art topics.
+**GeoGon**은 컴퓨터 그래픽에 관한 개인 기술 블로그입니다. 셰이더, 렌더링, 게임 엔진, 테크니컬 아트 관련 주제를 다룹니다.
 
-- **Site URL:** https://garmede.github.io
-- **Author:** 차영곤 (Cha Young-gon)
-- **Language:** Korean (ko-KR)
-- **Framework:** Jekyll with Chirpy theme
-- **Hosting:** GitHub Pages
+- **사이트 URL:** https://garmede.github.io
+- **저자:** 차영곤
+- **언어:** 한국어 (ko-KR)
+- **프레임워크:** Jekyll + Chirpy 테마
+- **호스팅:** GitHub Pages
 
-## Tech Stack
+## 기술 스택
 
-| Component | Technology |
-|-----------|------------|
-| Static Site Generator | Jekyll 4.2.2 |
-| Theme | jekyll-theme-chirpy (~> 5.2.1) |
-| Language | Ruby |
-| Markdown Processor | Kramdown with GFM |
-| Syntax Highlighting | Rouge |
-| Comments | Giscus (GitHub Discussions) |
-| Analytics | Google Analytics |
+| 구성요소 | 기술 |
+|---------|------|
+| 정적 사이트 생성기 | Jekyll 4.2.2 |
+| 테마 | jekyll-theme-chirpy (~> 5.2.1) |
+| 언어 | Ruby |
+| 마크다운 프로세서 | Kramdown (GFM 지원) |
+| 구문 강조 | Rouge |
+| 댓글 시스템 | Giscus (GitHub Discussions 기반) |
+| 분석 도구 | Google Analytics |
 | CI/CD | GitHub Actions |
 
-## Directory Structure
+## 디렉토리 구조
 
 ```
 garmede.github.io/
-├── _config.yml              # Main Jekyll configuration
-├── _posts/                  # Published blog posts (YYYY-MM-DD-slug.md)
-├── _drafts/                 # Draft posts (no date prefix needed)
-├── _tabs/                   # Static pages (about, archives, categories, tags)
+├── _config.yml              # Jekyll 메인 설정 파일
+├── _posts/                  # 발행된 블로그 포스트 (YYYY-MM-DD-slug.md)
+├── _drafts/                 # 초안 (날짜 접두사 불필요)
+├── _tabs/                   # 정적 페이지 (about, archives, categories, tags)
 ├── _data/
-│   ├── author.yml           # Author definitions
-│   ├── contact.yml          # Contact/social links config
-│   ├── share.yml            # Social sharing options
-│   ├── locales/             # i18n translations (ko-KR is primary)
-│   └── assets/              # Asset loading configuration
-├── _sass/                   # SCSS custom styles
-├── _plugins/                # Jekyll Ruby plugins
-│   └── posts-lastmod-hook.rb  # Auto-detects post modification dates
+│   ├── author.yml           # 저자 정보
+│   ├── contact.yml          # 연락처/소셜 링크 설정
+│   ├── share.yml            # 소셜 공유 옵션
+│   ├── locales/             # 다국어 번역 (ko-KR이 기본)
+│   └── assets/              # 에셋 로딩 설정
+├── _sass/                   # SCSS 커스텀 스타일
+├── _plugins/                # Jekyll Ruby 플러그인
+│   └── posts-lastmod-hook.rb  # 포스트 수정일 자동 감지
 ├── assets/
 │   ├── img/
-│   │   ├── blog/            # Blog post images (.webp)
-│   │   ├── tutorial/        # Tutorial images (.webp)
-│   │   └── favicons/        # Site favicons
-│   ├── fonts/               # Custom fonts
-│   └── lib/                 # Submodule: chirpy-static-assets
+│   │   ├── blog/            # 블로그 포스트 이미지 (.webp)
+│   │   ├── tutorial/        # 튜토리얼 이미지 (.webp)
+│   │   └── favicons/        # 사이트 파비콘
+│   ├── fonts/               # 커스텀 폰트
+│   └── lib/                 # 서브모듈: chirpy-static-assets
 ├── tools/
-│   └── deploy.sh            # Deployment script
+│   └── deploy.sh            # 배포 스크립트
 ├── .github/workflows/
-│   └── pages.yml            # GitHub Actions CI/CD workflow
-├── Gemfile                  # Ruby dependencies
-└── .editorconfig            # Code style conventions
+│   └── pages.yml            # GitHub Actions CI/CD 워크플로우
+├── Gemfile                  # Ruby 의존성
+└── .editorconfig            # 코드 스타일 규칙
 ```
 
-## Development Workflow
+## 개발 워크플로우
 
-### Local Development
+### 로컬 개발 환경
 
 ```bash
-# Install dependencies
+# 의존성 설치
 bundle install
 
-# Start development server with drafts
+# 초안 포함 개발 서버 시작
 bundle exec jekyll serve --drafts
 
-# Build for production
+# 프로덕션 빌드
 JEKYLL_ENV=production bundle exec jekyll build
 ```
 
-### Creating New Content
+### 새 콘텐츠 작성
 
-#### Blog Posts
+#### 블로그 포스트
 
-1. Create a new file in `_posts/` with the naming pattern:
+1. `_posts/` 폴더에 다음 형식으로 파일 생성:
    ```
-   YYYY-MM-DD-title-slug.md
+   YYYY-MM-DD-제목-슬러그.md
    ```
 
-2. Use this frontmatter template:
+2. 프론트매터 템플릿:
    ```yaml
    ---
-   title: "제목 (Korean title)"
-   categories: [Blog]  # or [Tutorial]
-   tags: [태그1, 태그2]  # Korean tags
+   title: "포스트 제목"
+   categories: [Blog]  # 또는 [Tutorial]
+   tags: [태그1, 태그2]
    image:
-     path: /assets/img/blog/image-name.webp
+     path: /assets/img/blog/이미지명.webp
    author: gon
    ---
    ```
 
-3. Write content in Korean using Markdown
+3. 마크다운으로 한국어 콘텐츠 작성
 
-#### Draft Posts
+#### 초안 작성
 
-- Place drafts in `_drafts/` without date prefix
-- Filename: `title-slug.md`
-- Use `jekyll serve --drafts` to preview
+- `_drafts/` 폴더에 날짜 접두사 없이 저장
+- 파일명: `제목-슬러그.md`
+- `jekyll serve --drafts`로 미리보기
 
-### Image Conventions
+### 이미지 규칙
 
-- **Format:** WebP (preferred for web optimization)
-- **Blog images:** `/assets/img/blog/`
-- **Tutorial images:** `/assets/img/tutorial/`
-- **Alignment:** Use `{: .align-center}` for centered images
-- **Captions:** Add `*caption text*` on a new line after image
+- **포맷:** WebP (웹 최적화를 위해 권장)
+- **블로그 이미지:** `/assets/img/blog/`
+- **튜토리얼 이미지:** `/assets/img/tutorial/`
+- **정렬:** 가운데 정렬시 `{: .align-center}` 사용
+- **캡션:** 이미지 다음 줄에 `*캡션 텍스트*` 추가
 
-Example:
+예시:
 ```markdown
-![Alt text](/assets/img/blog/image.webp){: .align-center}
-*Image caption here*
+![대체 텍스트](/assets/img/blog/image.webp){: .align-center}
+*이미지 캡션*
 ```
 
-## Content Writing Conventions
+## 콘텐츠 작성 규칙
 
-### Language & Formatting
+### 언어 및 서식
 
-- **Primary language:** Korean (ko-KR)
-- **Abbreviations:** Define at end of post with `*[TERM]: Definition`
-- **Emphasis:** Use `**bold**` for key terms
-- **Quotes/Tips:** Use Chirpy's prompt blocks
+- **기본 언어:** 한국어 (ko-KR)
+- **약어 정의:** 포스트 끝에 `*[용어]: 정의` 형식으로 추가
+- **강조:** 핵심 용어에 `**굵게**` 사용
+- **인용/팁:** Chirpy 테마의 프롬프트 블록 사용
 
-### Prompt Blocks (Chirpy Theme)
+### 프롬프트 블록 (Chirpy 테마)
 
 ```markdown
-> **Title**\
-> Content here
+> **제목**\
+> 내용
 {: .prompt-tip }
 
-> Warning content
+> 경고 내용
 {: .prompt-warning }
 
-> Info content
+> 정보 내용
 {: .prompt-info }
 
-> Danger content
+> 위험 내용
 {: .prompt-danger }
 ```
 
-### Embedded Media
+### 미디어 삽입
 
-YouTube:
+YouTube 영상:
 ```html
 <iframe width="100%" height="450"
   src="https://www.youtube.com/embed/VIDEO_ID"
@@ -153,22 +153,22 @@ YouTube:
   allowfullscreen></iframe>
 ```
 
-## Configuration Reference
+## 설정 참조
 
-### Key `_config.yml` Settings
+### 주요 `_config.yml` 설정
 
-| Setting | Value | Notes |
-|---------|-------|-------|
-| `lang` | `ko-KR` | Korean language |
-| `timezone` | `Asia/Seoul` | Korean timezone |
-| `theme_mode` | (empty) | Auto light/dark |
-| `comments.active` | `giscus` | GitHub Discussions comments |
-| `paginate` | `10` | Posts per page |
-| `toc` | `true` | Table of contents enabled |
+| 설정 | 값 | 설명 |
+|-----|---|------|
+| `lang` | `ko-KR` | 한국어 |
+| `timezone` | `Asia/Seoul` | 한국 시간대 |
+| `theme_mode` | (비어있음) | 자동 라이트/다크 모드 |
+| `comments.active` | `giscus` | GitHub Discussions 댓글 |
+| `paginate` | `10` | 페이지당 포스트 수 |
+| `toc` | `true` | 목차 활성화 |
 
-### Author Configuration
+### 저자 설정
 
-Defined in `_data/author.yml`:
+`_data/author.yml`에 정의:
 ```yaml
 gon:
   name: 차영곤
@@ -176,92 +176,92 @@ gon:
   url: https://garmede.github.io
 ```
 
-Reference in posts with `author: gon`
+포스트에서 `author: gon`으로 참조
 
-## Deployment
+## 배포
 
-### Automatic (Recommended)
+### 자동 배포 (권장)
 
-Push to `main` branch triggers GitHub Actions workflow:
+`main` 브랜치에 푸시하면 GitHub Actions 워크플로우가 실행:
 
-1. Checks out code with submodules
-2. Sets up Ruby 3.1 with bundler caching
-3. Builds Jekyll site
-4. Deploys to GitHub Pages
+1. 서브모듈 포함하여 코드 체크아웃
+2. Ruby 3.1 설정 및 번들러 캐싱
+3. Jekyll 사이트 빌드
+4. GitHub Pages에 배포
 
-### Manual Deployment
+### 수동 배포
 
-Use the deployment script (runs in CI only):
+배포 스크립트 사용 (CI 환경에서만 실행):
 ```bash
 ./tools/deploy.sh
 ```
 
-Options:
-- `--dry-run`: Build without deploying
-- `--config FILE`: Use custom config
+옵션:
+- `--dry-run`: 배포 없이 빌드만 실행
+- `--config FILE`: 커스텀 설정 파일 사용
 
-## Code Style
+## 코드 스타일
 
-Defined in `.editorconfig`:
+`.editorconfig`에 정의:
 
-- **Charset:** UTF-8
-- **Indentation:** 2 spaces
-- **Line endings:** LF (Unix-style)
-- **Trailing whitespace:** Trimmed
-- **Final newline:** Required
+- **문자 인코딩:** UTF-8
+- **들여쓰기:** 스페이스 2칸
+- **줄바꿈:** LF (Unix 스타일)
+- **후행 공백:** 제거
+- **마지막 줄 개행:** 필수
 
-## Git Workflow
+## Git 워크플로우
 
-### Branch Strategy
+### 브랜치 전략
 
-- `main`: Production branch, triggers auto-deployment
-- Feature branches: For new content or changes
+- `main`: 프로덕션 브랜치, 자동 배포 트리거
+- 기능 브랜치: 새 콘텐츠나 변경사항용
 
-### Commit Messages
+### 커밋 메시지
 
-Use Korean or English commit messages. Recent examples:
-- `테마 업데이트` (Theme update)
-- `초안 추가` (Draft addition)
-- `엔진리뷰-유니티 추가` (Engine review - Unity addition)
+한국어 또는 영어로 작성. 최근 예시:
+- `테마 업데이트`
+- `초안 추가`
+- `엔진리뷰-유니티 추가`
 
-## Important Notes for AI Assistants
+## AI 어시스턴트 주의사항
 
-### Do's
+### 해야 할 것
 
-- Write content in Korean
-- Use WebP format for new images
-- Follow existing frontmatter patterns
-- Use Chirpy theme's built-in styling classes
-- Test with `bundle exec jekyll serve --drafts` before committing
+- 콘텐츠는 한국어로 작성
+- 새 이미지는 WebP 포맷 사용
+- 기존 프론트매터 패턴 따르기
+- Chirpy 테마의 내장 스타일 클래스 활용
+- 커밋 전 `bundle exec jekyll serve --drafts`로 테스트
 
-### Don'ts
+### 하지 말아야 할 것
 
-- Don't change the theme configuration without explicit request
-- Don't add new dependencies without discussion
-- Don't modify `assets/lib/` (it's a git submodule)
-- Don't push directly to `main` for major changes
+- 명시적 요청 없이 테마 설정 변경 금지
+- 논의 없이 새 의존성 추가 금지
+- `assets/lib/` 수정 금지 (git 서브모듈임)
+- 주요 변경사항은 `main`에 직접 푸시 금지
 
-### Common Tasks
+### 자주 하는 작업
 
-1. **Add new blog post:**
-   - Create file in `_posts/` with proper date prefix
-   - Add frontmatter with title, categories, tags, image, author
-   - Place images in `assets/img/blog/`
+1. **새 블로그 포스트 추가:**
+   - `_posts/`에 날짜 접두사 포함하여 파일 생성
+   - title, categories, tags, image, author가 포함된 프론트매터 추가
+   - 이미지는 `assets/img/blog/`에 저장
 
-2. **Edit existing post:**
-   - The `posts-lastmod-hook.rb` plugin auto-updates modification date
-   - No manual `last_modified_at` needed
+2. **기존 포스트 수정:**
+   - `posts-lastmod-hook.rb` 플러그인이 수정일 자동 업데이트
+   - 수동으로 `last_modified_at` 설정 불필요
 
-3. **Preview drafts:**
-   - Place in `_drafts/` folder
-   - Run `bundle exec jekyll serve --drafts`
+3. **초안 미리보기:**
+   - `_drafts/` 폴더에 저장
+   - `bundle exec jekyll serve --drafts` 실행
 
-4. **Update site configuration:**
-   - Modify `_config.yml`
-   - Restart Jekyll server to apply changes
+4. **사이트 설정 변경:**
+   - `_config.yml` 수정
+   - Jekyll 서버 재시작하여 적용
 
-## Related Resources
+## 관련 자료
 
-- [Jekyll Documentation](https://jekyllrb.com/docs/)
-- [Chirpy Theme Wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki)
-- [Kramdown Syntax](https://kramdown.gettalong.org/syntax.html)
+- [Jekyll 공식 문서](https://jekyllrb.com/docs/)
+- [Chirpy 테마 위키](https://github.com/cotes2020/jekyll-theme-chirpy/wiki)
+- [Kramdown 문법](https://kramdown.gettalong.org/syntax.html)
